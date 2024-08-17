@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+    
+        <div class="add-movie">
+            <h2>Add Movie</h2>
+            <form id="addMovieForm">
+                <label for="title">Movie Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director" required>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="releaseDate">Release Date:</label>
+                <input type="date" id="releaseDate" name="releaseDate" required>
+
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Add Movie</button>
+            </form>
+        </div>
+        <div class="view-movies">
+            <h2>View Movie</h2>
+            <div class="search-sort">
+                <input type="text" placeholder="Search..." id="search">
+                <select id="sort">
+                    <option value="rating">Rating</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+            <div class="movies-list" id="moviesList">
+                <div class="no-movies" id="noMovies">
+                    <img src="oops.png" alt="No movies">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

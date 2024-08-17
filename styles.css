@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 100vh; /* Ensure container takes full height */
+    box-sizing: border-box;
+}
+
+.add-movie, .view-movies {
+    background-color: #2D0C5E;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 48%; /* Keep sections side by side */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.view-movies {
+    background-color: #f8f9fa;
+    color: #000;
+    height: auto; /* Allow the section to adjust its height based on content */
+}
+
+h2 {
+    color: #2D0C5E;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 90%;
+}
+
+button {
+    padding: 10px;
+    background-color: #f0a500;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+}
+
+button:hover {
+    background-color: #e59400;
+}
+
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-sort input, .search-sort select {
+    width: 48%; /* Ensure search and sort inputs stay on the same line */
+    padding: 8px;
+}
+
+.movies-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    flex-grow: 1; /* Allow the list to grow and fill available space */
+}
+
+.movie-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.movie-item h3 {
+    margin-top: 0;
+}
+
+.movie-item p {
+    margin: 5px 0;
+}
+
+.no-movies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Center the content vertically */
+}
+
+.no-movies img {
+    width: 100%;
+    max-width: 300px; /* Ensure the image fits within the container */
+    height: auto;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .add-movie, .view-movies {
+        width: 100%; /* Stack sections vertically on small screens */
+        margin-bottom: 20px;
+    }
+}
